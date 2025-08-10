@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "gerardo",
+        "edad": "30",
+        "país": "venezuela"
+    },
+    {
+        "nombre": "marta",
+        "edad": "29",
+        "país": "argentina"
+    },
+    {
+        "nombre": "Margherita",
+        "edad": "34",
+        "país": "italia"
+    }
+]

@@ -1,0 +1,4 @@
+nombre,pedro,edad,30
+nombre,ana,edad,30
+nombre,gerardo,edad,30
+nombre,sara,edad,30

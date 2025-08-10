@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Website to conver files
 
-## Getting Started
+This is a full-stack web application built with:
 
-First, run the development server:
+- **Frontend**: Nextjs, TailwindCSS, TypeScript
+- **Backend**: Node.js, Nextjs, TypeScript, PostgreSQL
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+Users can:
+
+- Create an account
+- Convert files according to the available options and download them
+- Leave a review on the website
+
+---
+
+## 🚀 Getting Started
+
+bash
+
+### 1. Clone the repository
+
+```
+git clone https://github.com/azgerarw/file-converter.git
+cd file-converter
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
+This will install dependencies for both frontend and backend.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 4. Enviromental variables
 
-To learn more about Next.js, take a look at the following resources:
+You will need a .env file in the root folder with your configuration.
+If you have not created one yet, make sure to define:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+DATABASE_URL=postgresql://user:password@localhost:5432/dbname
+NEXTAUTH_SECRET=secret_password
+```
+### 4. Run the development server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+npm run dev
+```
+This command will start both the frontend and backend with Nextjs.
+Access the app at http://localhost:3000.
 
-## Deploy on Vercel
+### 5. How to use the app
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Convert to Excel: upload a file among the following types .csv, .json, .ods o .txt, click on "Convert" and download the .xlsx file.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Convert to PDF: upload a file among the following types .doc, .docx, .xlsx o .pptx and the app will convert it into PDF automatically.
+
+Convert from PDF: upload a PDF file and select the output file type among the following (.docx, .xlsx, .pptx).
+
+### 6. Project folder structure
+
+├── pages/ or app/        # Next.js routes and logic
+├── public/               # Static files and converted files to download
+├── lib/                  # Funciones compartidas (ej. conversión)
+├── components/           # Client components (buttons, forms, etc...)
+├── api/                  # Endpoints
+├── package.json          # Dependencies and scripts
+├── tailwind.config.js    # Tailwind CSS config
+├── tsconfig.json         # TypeScript config
+└── .env.local            # enviroment variables
+
+### 7. Credits
+Based on frameworks and open source libraries like Next.js, Aspose for Node.js, Puppeteer and more. Thanks to all authors and communities for their job.
+
+### 8. License
+This project is licensed under the MIT License. If you wish to contribute or use the code, feel free to do so.
+
+### 9. Contact
+If you have any questions, feel free to open an issue or submit a pull request.
